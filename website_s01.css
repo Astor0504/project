@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
+body {
+    font-family:Arial, 'Chocolate Classical Sans', sans-serif;
+    font-size: 14pt;
+    padding-top: 60px;
+}
+
+.navbar {
+    padding: 0px;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight:bold;
+    font-size: 1.0vw;
+}
+
+.dropdown-item {
+    color: #333333 !important;
+    font-size: 1.0vw;
+}
+
+.dropdown .dropdown-item:hover,
+.dropdown .dropdown-item:focus {
+    color: #333333 !important;
+    background-color: #e9ecef;
+}
+
+#content {
+    margin-top:10px;
+}
+.row .col-md-2 .sidebar,.accordion-button {
+    border: 2px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+.sidebar {
+    padding: 5px;
+}
+.accordion-button {
+    font-size: 1.0vw;
+}
+.accordion-body table td:hover {
+    background-color: antiquewhite;
+}
+.accordion-body {
+    padding: 0px;
+}
+.table {
+    margin-bottom: 0px;
+}
+.table td {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 2rem;
+    font-size: 0.8vw;
+}
+td > em {
+    margin-right: 5px;
+}
+
+#aboutme {
+    background-color: #fcf5eb;
+    color: #332a20;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#last-data {
+    height: 50px;
+    background-color: #fcf5eb;
+}
+
+.carousel-inner img {
+    width: 1080px;
+    height: 700px;
+}
+
+.apply-button {
+    background-color: #e02020;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+    margin-right: 80%;
+}
+
+.apply-button {
+    border: 1px solid var(--primary-background, var(--primary-color, #c74060));
+    color: var(--primary-text, #fff);
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+@media screen and (min-width:993px) {
+    .dropend:hover>.dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+}
+
+.card.text-center.mt-3 img {
+    opacity: 1;
+    transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+}
+
+.card.text-center.mt-3 img:hover {
+    opacity: 0.8;
+    
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style:none;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.col-md-10 nav {
+    margin-left: -10px;
+    margin-left: -10px;
+}
+
+.card .row.mt-2 .col-md-4 a>img:hover {
+    border: #e600a0 1px solid;
+}
+
+.color_e600a0 {
+    color: #e600a0;
+}
+
+.color-success{
+    color: #FFF;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.badge.text-bg-info {
+    font-size: 40%;
+    color: #fff !important;
+}
+
+.color_red {
+    color: red;
+}
+
+.table-responsive-md table td {
+    text-align: center;
+}
+
+.table-responsive-md table tfoot td {
+    text-align: center;
+}
+
+.table-responsive-md table tr:hover {
+    background-color: rgba(152,214,245,0.3);
+}
+
+
+
+
+/* 主按鈕樣式 */
+.btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #B34A3B; /* 磚紅色背景 */
+    --bs-btn-border-color: #B34A3B;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #D2691E; /* 深橙紅色背景 */
+    --bs-btn-hover-border-color: #D2691E;
+    --bs-btn-focus-shadow-rgb: 179, 74, 59; /* 聚焦時的陰影顏色 */
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #B34A3B;
+    --bs-btn-active-border-color: #D2691E;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #B34A3B;
+    --bs-btn-disabled-border-color: #D2691E;
+}
+
+/* 次按鈕樣式 */
+.btn-success {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #E7A94A; /* 金黃色背景 */
+    --bs-btn-border-color: #E7A94A;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #D78E2B; /* 深金黃色背景 */
+    --bs-btn-hover-border-color: #D78E2B;
+    --bs-btn-focus-shadow-rgb: 231, 169, 74; /* 聚焦時的陰影顏色 */
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #E7A94A;
+    --bs-btn-active-border-color: #D78E2B;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #E7A94A;
+    --bs-btn-disabled-border-color: #D78E2B;
+}
+
+/* 修改第二層的字體顏色和大小 */
+.accordion-body > table > tbody > tr > td {
+    color: #333333 !important;
+    font-size: 1vw; /* 調整字體大小 */
+}
+
+/* 修改第二層的連結顏色 */
+.accordion-body > table > tbody > tr > td > a {
+    color: #333333 !important; /* 修改為藍色 */
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 1vw; /* 調整字體大小 */
+}

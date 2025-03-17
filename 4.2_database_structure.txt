@@ -1,0 +1,110 @@
+4.2 資料庫資料結構表
+
+本系統的資料庫設計包含以下主要表結構：
+
+1. 會員資料表（member）
+   - emailid：整數，主鍵，自動遞增，email流水號
+   - email：字符串，email帳號（唯一）
+   - pw1：字符串，密碼
+   - active：布爾值，是否啟動（預設為1）
+   - cname：字符串，中文姓名
+   - tssn：字符串，身份證字號
+   - birthday：日期，生日
+   - imgname：字符串，相片檔名（可為空）
+   - create_date：日期時間，建立日期（預設為當前時間）
+
+2. 收件地址表（addbook）
+   - addressid：整數，主鍵，自動遞增，地址ID
+   - setdefault：布爾值，預設收件人（預設為0）
+   - emailid：整數，會員編號（關聯member表）
+   - cname：字符串，收件者姓名
+   - mobile：字符串，收件者電話
+   - myzip：字符串，郵遞區號（可為空）
+   - address：字符串，收件地址
+   - create_date：日期時間，建立日期（預設為當前時間）
+
+3. 產品類別表（pyclass）
+   - classid：整數，主鍵，自動遞增，產品類別
+   - level：整數，所在層級
+   - fonticon：字符串，字型圖示
+   - cname：字符串，類別名稱
+   - sort：整數，列表排序
+   - uplink：整數，上層連結
+   - create_date：日期時間，建立及更新時間
+
+4. 產品表（product）
+   - p_id：整數，主鍵，自動遞增，產品編號
+   - classid：整數，產品類別（關聯pyclass表）
+   - p_name：字符串，產品名稱
+   - p_intro：字符串，產品簡介（可為空）
+   - p_price：整數，產品單價（可為空）
+   - p_open：布爾值，上架（預設為1）
+   - p_content：文本，產品詳細規格（可為空）
+   - p_date：日期時間，產品輸入日期（預設為當前時間）
+
+5. 產品圖片表（product_img）
+   - img_id：整數，主鍵，自動遞增，圖檔編號
+   - p_id：整數，產品編號（關聯product表）
+   - img_file：字符串，圖檔名稱
+   - sort：整數，圖片順序
+   - create_date：日期時間，建立日期（預設為當前時間）
+
+6. 購物車表（cart）
+   - cartid：整數，主鍵，自動遞增，購物車編號
+   - emailid：整數，會員編號（可為空，關聯member表）
+   - p_id：整數，產品編號（關聯product表）
+   - qty：整數，產品數量
+   - orderid：字符串，訂單編號（可為空）
+   - status：整數，訂單處理狀態（預設為1）
+   - ip：字符串，訂購者的IP
+   - create_date：日期時間，加入購物車時間（預設為當前時間）
+
+7. 訂單表（uorder）
+   - orderid：字符串，主鍵，訂單編號
+   - emailid：整數，會員編號（關聯member表）
+   - addressid：整數，收件人編號（關聯addbook表）
+   - howpay：整數，如何付款（預設為1）
+   - paystatus：整數，付款狀態（可為空）
+   - status：整數，訂單處理狀態（預設為1）
+   - remark：字符串，備註（可為空）
+   - create_date：日期時間，訂單時間（預設為當前時間）
+
+8. 城市表（city）
+   - AutoNo：整數，主鍵，自動遞增，城市編號
+   - Name：字符串，城市名稱
+   - cityOrder：整數，標記
+   - State：整數，狀態
+
+9. 鄉鎮市表（town）
+   - townNo：長整數，主鍵，自動遞增，鄉鎮市編號
+   - Name：字符串，鄉鎮市名稱
+   - Post：字符串，郵遞區號
+   - State：整數，狀態
+   - AutoNo：整數，上層城市編號連結（關聯city表）
+
+10. 輪播廣告表（carousel）
+    - caro_id：整數，主鍵，自動遞增，輪播編號
+    - caro_title：字符串，輪播標題（可為空）
+    - caro_content：字符串，輪播內容介紹（可為空）
+    - caro_online：布爾值，上下架（預設為1）
+    - caro_sort：整數，輪播排序
+    - caro_pic：字符串，輪播圖檔名稱
+    - p_id：整數，產品編號（關聯product表）
+    - create_date：日期時間，建立日期（預設為當前時間）
+
+11. 熱銷商品表（hot）
+    - h_id：整數，主鍵，自動遞增，熱銷商品流水號
+    - p_id：整數，產品編號（關聯product表）
+    - h_sort：整數，熱銷商品排名（可為空）
+
+12. 多功能選擇表（multiselect）
+    - msid：整數，主鍵，自動遞增，多功能選擇ID
+    - mslevel：整數，多功能選擇層級
+    - msuplink：整數，上層連結
+    - opcode：字符串，外掛參數（可為空）
+    - msname：字符串，多功能選擇名稱
+    - msort：整數，各功能列表排序（可為空）
+    - url1：字符串，外掛網址1（可為空）
+    - url2：字符串，外掛網址2（可為空）
+    - create_date：日期時間，建立日期（預設為當前時間）
+    - update_date：字符串，修改日期（可為空）
