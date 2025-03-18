@@ -1,5 +1,5 @@
 <?php
-include_once("connections/conn_dbOriginal.php");
+include_once("./connections/conn_dbexpstore.php");
 if(isset($_GET['email'])) {
     $email = $_GET['email'];
     $query = "SELECT * FROM member WHERE email = '".$email."'";
