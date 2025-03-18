@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin:*');
 header('Content-Type:application/json;charset=utf-8');
 
-require_once('Connections/conn_dbexpstore.php');
+require_once('./connections/conn_dbexpstore.php');
 
 if (isset($_GET['emailid']) && $_GET['emailid'] != '') {
     $emailid = $_GET['emailid'];

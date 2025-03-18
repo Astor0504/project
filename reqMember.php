@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin:*');
 header('Content-Type:application/json;charset=utf-8');
 
 // 引入資料庫連線設定
-require_once('Connections/conn_dbexpstore.php');
+require_once('./connections/conn_dbexpstore.php');
 
 // 檢查是否有提供 emailid 參數且不為空
 if (isset($_GET['emailid']) && $_GET['emailid'] != '') {

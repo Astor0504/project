@@ -6,7 +6,7 @@ header('Content-Type:application/json;charset=utf-8');
 // 檢查是否啟動 session
 if (!isset($_SESSION)) session_start();
 
-require_once('Connections/conn_dbexpstore.php');
+require_once('./connections/conn_dbexpstore.php');
 
 // 檢查 POST 請求是否包含帳號和密碼
 if (isset($_POST['inputAccount']) && isset($_POST['inputPassword'])) {

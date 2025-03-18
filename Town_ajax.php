@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json; charset=utf-8');
 
-require_once('Connections/conn_dbexpstore.php');
+require_once('./connections/conn_dbexpstore.php');
 
 $Town = sprintf("SELECT * FROM town WHERE AutoNo='%d'", $_POST["CNo"]);
 $Town_rs = $link->query($Town);

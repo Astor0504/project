@@ -19,7 +19,7 @@ if ($addbook_rs && $addbook_rs->rowCount() != 0) {
     $toName = "";
 }
 ?>
-<h3>店商藥妝 會員: <?php echo $_SESSION['cname']; ?>結帳作業</h3>
+<h3>會員: <?php echo $_SESSION['cname']; ?>結帳作業</h3>
 <div class="row">
     <div class="card col">
         <div class="card-header" style="color:#007bff;">

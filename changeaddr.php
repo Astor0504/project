@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin:*');
 header('Content-Type: application/json; charset=utf-8'); //return json string
 
-require_once('Connections/conn_dbexpstore.php');
+require_once('./connections/conn_dbexpstore.php');
 (!isset($_SESSION)) ? session_start() : "";
 
 if(isset($_SESSION['emailid']) && $_SESSION['emailid'] != "") {

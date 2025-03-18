@@ -1,5 +1,5 @@
 <?php
-include_once("Connections/conn_dbexpstore.php");
+include_once("./connections/conn_dbexpstore.php");
 
 if (isset($_GET['emailid'])) {
     $emailid = $_GET['emailid'];

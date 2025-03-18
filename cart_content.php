@@ -4,7 +4,7 @@
                     $cart_rs = $link->query($SQLstring);
                     $ptotal = 0; //設定累加的變數，初始=0;
                     ?>
-                    <h3>電商藥妝:購物車</h3>
+                    <h3>購物車</h3>
                     <?php if ($cart_rs->rowCount() != 0) { ?>
                         <a href="./index.php" id="btn01" name="btn01" class="btn btn-primary">繼續購物</a>
                         <button type="button" id="btn02" name="btn02" class="btn btn-info" onclick="window.history.go(-1)">回到上一頁</button>
